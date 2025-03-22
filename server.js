@@ -65,7 +65,7 @@ app.get('/api', (req, res) => {
   res.send('API Server is running 🚀');
 });
 
-app.get('/api/configs/:drone_id', async (req, res) => {
+app.get('/configs/:drone_id', async (req, res) => {
   const { drone_id } = req.params;
   try {
     const droneData = await getDroneData(drone_id);
@@ -77,7 +77,7 @@ app.get('/api/configs/:drone_id', async (req, res) => {
   }
 });
 
-app.get('/api/status/:drone_id', async (req, res) => {
+app.get('/status/:drone_id', async (req, res) => {
   const { drone_id } = req.params;
   try {
     const droneDatas = await getDroneData(drone_id);
@@ -90,7 +90,7 @@ app.get('/api/status/:drone_id', async (req, res) => {
   }
 });
 
-app.get('/api/logs/:drone_id', async (req, res) => {
+app.get('/logs/:drone_id', async (req, res) => {
   const { drone_id } = req.params;
   try {
     const logs = await getDroneLogs(drone_id);
