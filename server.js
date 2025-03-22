@@ -129,6 +129,8 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
+// หัวใจน้องน้อยคอยนาน
+
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
 });
