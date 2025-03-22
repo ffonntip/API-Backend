@@ -129,4 +129,6 @@ app.use((req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-export default app;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on http://localhost:${PORT}`);
+});
