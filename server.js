@@ -65,6 +65,10 @@ app.get('/api', (req, res) => {
   res.send('API Server is running 🚀');
 });
 
+app.get('/', (req, res) => {
+  res.send('API Server is running 🚀');
+});
+
 app.get('/configs/:drone_id', async (req, res) => {
   const { drone_id } = req.params;
   try {
